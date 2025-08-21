@@ -1,0 +1,353 @@
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.2;
+}
+
+.responsive {
+  width: 5%;
+  /* max-width: 400px; */
+  height: auto;
+  position: absolute;
+  top: 15%;
+  left: 85%;
+  transform: translate(120%, -120%);
+  /* keep centered in parent */
+  height: auto;
+}
+
+body {
+  color: white;
+  /* these don't matter: */
+  margin: 0;
+  padding: 0;
+}
+
+.full-window-height {
+  height: 100vh;
+  opacity: 0.85;
+  z-index: 2;
+  visibility: visible;
+  /* ONLY if you want the video to fill the entire browser window. Support: http://caniuse.com/#search=vh */
+}
+
+.image_overlay {
+  border: 1px;
+  padding: 25px;
+  height: 100%;
+  width: 100%;
+
+  background-size: 8px;
+  background-repeat: repeat;
+  background-image: url("hexed_16.png");
+  /* background-repeat: repeat; */
+
+}
+
+.video-bg {
+  visibility: visible;
+  position: relative;
+  /* contain the abs-pos <video> */
+  width: 100%;
+  overflow: hidden;
+  /* prevent rgnbbars
+  /* these below don't matter: */
+  /*padding: 10% 0; */
+  text-align: center;
+  font: bold 40px/1.2 sans-serif;
+}
+
+.video-bg video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* keep centered in parent */
+  z-index: -1;
+  /* keep video behind other content */
+  min-width: 100%;
+  /* always cover horizontal */
+  min-height: 100%;
+  /* always cover vertical */
+}
+
+h1 {
+  /* these don't matter: */
+  transform: translate(0, 50%);
+  /* keep centered in parent */
+  margin-right: 3.5vw;
+  margin-bottom: -3.1vw;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 8vw;
+  text-align: right;
+  line-height: 80%;
+  color: rgb(236, 255, 32)
+}
+
+h2 {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 16vh;
+  margin-right: 3vw;
+  line-height: 80%;
+  text-align: right;
+  color: white;
+}
+
+grid-container {
+  color: white;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-size: 16vh;
+  display: grid;
+  grid-template-columns: 1.9fr 0.3fr 1.5fr 0.3fr;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+  grid-template-areas: "titolo . . .""testo . testo2- .""testo . . .""testo . icona .";
+}
+
+.titolo {
+  line-height: 90%;
+  padding-top: 4vh;
+  font-weight: 700;
+  margin-left: 12vh;
+  text-align: left;
+  grid-area: titolo;
+  font-family: 'IBM Plex Mono', sans-serif;
+  color: yellow;
+  ;
+  font-size: 8vh;
+}
+
+.testo {
+  margin-top: 3vh;
+  margin-left: 12vh;
+  text-align: left;
+  /* font-weight: lighter; */
+  font-family: 'IBM Plex Mono', sans-serif;
+  /* font-weight: 100; */
+  color: white;
+  font-size: 2vh;
+  /* line-height: 177%; */
+}
+
+.testo2- {
+  grid-area: testo2-;
+  color: white;
+}
+
+#testo {
+  padding-top: 4vh;
+  margin-left: 13vh;
+  text-align: left;
+  /* font-weight: lighter; */
+  grid-area: testo;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 2.1vh;
+  line-height: 167%;
+}
+
+#info {
+  padding-top: 3vh;
+  color: white;
+  text-align: left;
+  margin-left: 14vh;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: 2.1vh;
+}
+
+#puntato {
+  padding-top: 2vh;
+  font-weight: 300;
+  font-size: 2.1vh;
+  text-align: left;
+  font-family: 'IBM Plex Mono', sans-serif;
+  color: white;
+}
+
+#mail {
+  text-align: right;
+  padding-top: 5vh;
+  padding-left: -1vh;
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-weight: 900;
+  color: red;
+  font-size: 4.3vh;
+  color: rgb(243, 59, 203)
+}
+
+.icona {
+  grid-area: icona;
+  color: white;
+}
+
+#req {
+  padding-top: 12vh;
+  padding-left: 32vh;
+}
+.artisti {
+  font-family: 'IBM Plex Mono', sans-serif;
+  color: rgb(243, 59, 203)
+
+  color:white;
+}
+a:link {
+  color: rgb(243, 59, 203)
+ }
+ a:visited {
+   color: rgb(243, 59, 203)
+
+ }
+
+ a:hover {
+   color: rgb(243, 59, 203)
+ }
+
+ a:active {
+   color: rgb(243, 59, 203)
+
+ }
+ .artisti {
+   line-height: 180%;
+
+   padding:3vh;
+   font-family: 'IBM Plex Mono', sans-serif;
+   color:  white !important;
+font-weight: 600;
+  }
+
+
+
+@media only screen and (max-device-width: 400px) {
+
+
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  .titolo {
+    padding-top: 8.5vh;
+    font-weight: 600;
+    margin-left: 0.1vh;
+    text-align: left;
+    grid-area: titolo;
+    font-family: 'IBM Plex Mono', sans-serif;
+    color: yellow;
+    ;
+    font-size: 4vh;
+  }
+
+  #testo {
+    text-align: justify;
+text-justify: inter-word;
+    margin-left: 0vh;
+margin-right: 1vh;
+    padding-top: 3vh;
+
+    text-align: left;
+    /* font-weight: lighter; */
+    grid-area: testo;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 2.9vh;
+    line-height: 140%;
+  }
+
+  #mail {
+    margin-left: 0.1vh;
+    margin-top: 0vh;
+    text-align: center;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 900;
+    color: red;
+    font-size: 3.9vh;
+    color: rgb(243, 59, 203)
+  }
+  #req {
+    padding-top: 1vh;
+  }
+  #puntato {
+    margin-left: 0.1vh;
+
+    font-weight: 300;
+    font-size: 2.9vh;
+    margin-top: 2vh;
+    color: white;
+    text-align: center;
+  }
+
+  #info {
+    text-align: left;
+    margin-left: 0.1vh;
+
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 700;
+    color: black;
+    /* margin-top: 4vh; */
+  font-size: 2.9vh;
+  }
+
+  .video-bg {
+    position: relative;
+    /* contain the abs-pos <video> */
+    width: 100%;
+
+    /* these below don't matter: */
+    /*padding: 10% 0; */
+    text-align: center;
+    font: bold 40px/1.2 sans-serif;
+  }
+  .responsive {
+    width: 15%;
+    /* max-width: 400px; */
+    height: auto;
+    position: absolute;
+    top:  13.5%;
+    left: 25%;
+    transform: translate(120%, -120%);
+    /* keep centered in parent */
+    height: auto;
+  }
+  div.box
+  {
+  width:70vh; height:40vh;
+
+  padding:1px 0;
+  font-size:10px
+  }
+  div.box-inner
+  {
+  height: 100vh;
+    width:75%;
+  overflow:auto;
+  margin:1px 1px 0;
+  padding :1px;
+  }
+  .container-fluid {
+    padding:0px;
+
+    margin: 0px;
+   }
+   .artisti {
+     line-height: 180%;
+
+     /* padding-top:3vh; */
+     font-family: 'IBM Plex Mono', sans-serif;
+     color:  white !important;
+font-weight: 400;
+    }
+    #mail_1{
+      /* border-style: dotted;
+        border-width: 5px; */
+      margin-left: 0.1vh;
+      margin-top: 0vh;
+      text-align: center;
+      font-family: 'IBM Plex Mono', sans-serif;
+      font-weight: 900;
+      color: red;
+      font-size: 3.9vh;
+      color: rgb(243, 59, 203)
+    }
+}
